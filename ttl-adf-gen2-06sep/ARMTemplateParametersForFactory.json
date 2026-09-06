@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "ttl-adf-gen2-06sep"
+		},
+		"LS_DATABSE_A_password": {
+			"value": ""
+		},
+		"sql_ls_password": {
+			"value": ""
+		},
+		"ttl_raw_sql_ls_accountKey": {
+			"value": ""
+		},
+		"LS_DATABSE_A_properties_typeProperties_server": {
+			"value": "tthcemr06sep.database.windows.net"
+		},
+		"LS_DATABSE_A_properties_typeProperties_database": {
+			"value": "trendy-tech-hospital-a"
+		},
+		"LS_DATABSE_A_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"sql_ls_properties_typeProperties_server": {
+			"value": "tthcemr06sep.database.windows.net"
+		},
+		"sql_ls_properties_typeProperties_database": {
+			"value": "trendy-tech-hospital-b"
+		},
+		"sql_ls_properties_typeProperties_userName": {
+			"value": "sqladmin"
+		},
+		"ttl_raw_sql_ls_properties_typeProperties_url": {
+			"value": "https://ttadlsdev06sep.dfs.core.windows.net/"
+		}
+	}
+}

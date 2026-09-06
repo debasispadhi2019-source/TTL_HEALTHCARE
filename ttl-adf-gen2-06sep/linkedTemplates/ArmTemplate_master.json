@@ -1,0 +1,112 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "ttl-adf-gen2-06sep"
+		},
+		"LS_DATABSE_A_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'LS_DATABSE_A'"
+		},
+		"sql_ls_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'sql_ls'"
+		},
+		"ttl_raw_sql_ls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ttl_raw_sql_ls'"
+		},
+		"LS_DATABSE_A_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "tthcemr06sep.database.windows.net"
+		},
+		"LS_DATABSE_A_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "trendy-tech-hospital-a"
+		},
+		"LS_DATABSE_A_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladmin"
+		},
+		"sql_ls_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "tthcemr06sep.database.windows.net"
+		},
+		"sql_ls_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "trendy-tech-hospital-b"
+		},
+		"sql_ls_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sqladmin"
+		},
+		"ttl_raw_sql_ls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://ttadlsdev06sep.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "ttl-adf-gen2-06sep_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"LS_DATABSE_A_password": {
+						"value": "[parameters('LS_DATABSE_A_password')]"
+					},
+					"sql_ls_password": {
+						"value": "[parameters('sql_ls_password')]"
+					},
+					"ttl_raw_sql_ls_accountKey": {
+						"value": "[parameters('ttl_raw_sql_ls_accountKey')]"
+					},
+					"LS_DATABSE_A_properties_typeProperties_server": {
+						"value": "[parameters('LS_DATABSE_A_properties_typeProperties_server')]"
+					},
+					"LS_DATABSE_A_properties_typeProperties_database": {
+						"value": "[parameters('LS_DATABSE_A_properties_typeProperties_database')]"
+					},
+					"LS_DATABSE_A_properties_typeProperties_userName": {
+						"value": "[parameters('LS_DATABSE_A_properties_typeProperties_userName')]"
+					},
+					"sql_ls_properties_typeProperties_server": {
+						"value": "[parameters('sql_ls_properties_typeProperties_server')]"
+					},
+					"sql_ls_properties_typeProperties_database": {
+						"value": "[parameters('sql_ls_properties_typeProperties_database')]"
+					},
+					"sql_ls_properties_typeProperties_userName": {
+						"value": "[parameters('sql_ls_properties_typeProperties_userName')]"
+					},
+					"ttl_raw_sql_ls_properties_typeProperties_url": {
+						"value": "[parameters('ttl_raw_sql_ls_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

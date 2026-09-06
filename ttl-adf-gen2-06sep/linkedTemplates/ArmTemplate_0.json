@@ -127,6 +127,9 @@
 						"type": "string"
 					}
 				},
+				"folder": {
+					"name": "SOUCE_SQL"
+				},
 				"annotations": [],
 				"type": "DelimitedText",
 				"typeProperties": {
@@ -158,6 +161,9 @@
 				"linkedServiceName": {
 					"referenceName": "ttl_raw_sql_ls",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SOUCE_SQL"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -201,6 +207,9 @@
 						"type": "string"
 					}
 				},
+				"folder": {
+					"name": "SOUCE_SQL"
+				},
 				"annotations": [],
 				"type": "AzureSqlTable",
 				"schema": [],
@@ -230,6 +239,9 @@
 						"type": "string"
 					}
 				},
+				"folder": {
+					"name": "SOUCE_SQL"
+				},
 				"annotations": [],
 				"type": "AzureSqlTable",
 				"schema": [],
@@ -258,6 +270,9 @@
 					"files_name": {
 						"type": "string"
 					}
+				},
+				"folder": {
+					"name": "SOUCE_SQL"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -299,6 +314,9 @@
 				"linkedServiceName": {
 					"referenceName": "ttl_raw_sql_ls",
 					"type": "LinkedServiceReference"
+				},
+				"folder": {
+					"name": "SOUCE_SQL"
 				},
 				"annotations": [],
 				"type": "DelimitedText",
@@ -454,6 +472,9 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
+				"folder": {
+					"name": "Souce_Sql"
+				},
 				"annotations": []
 			},
 			"dependsOn": [
@@ -589,6 +610,9 @@
 				"policy": {
 					"elapsedTimeMetric": {}
 				},
+				"folder": {
+					"name": "Souce_Sql"
+				},
 				"annotations": []
 			},
 			"dependsOn": [
@@ -640,6 +664,9 @@
 				],
 				"policy": {
 					"elapsedTimeMetric": {}
+				},
+				"folder": {
+					"name": "Souce_Sql"
 				},
 				"annotations": []
 			},

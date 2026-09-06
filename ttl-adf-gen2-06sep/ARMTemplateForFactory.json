@@ -25,7 +25,7 @@
 		},
 		"LS_DATABSE_A_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "trendy-tech-hospital-a"
+			"defaultValue": "trendy-tech-hospital-b"
 		},
 		"LS_DATABSE_A_properties_typeProperties_userName": {
 			"type": "string",
@@ -37,7 +37,7 @@
 		},
 		"sql_ls_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "trendy-tech-hospital-b"
+			"defaultValue": "trendy-tech-hospital-a"
 		},
 		"sql_ls_properties_typeProperties_userName": {
 			"type": "string",
@@ -344,6 +344,7 @@
 							"value": "@dataset().file",
 							"type": "Expression"
 						},
+						"folderPath": "DATABASE_B",
 						"fileSystem": "raw"
 					},
 					"columnDelimiter": ",",
@@ -371,6 +372,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"folderPath": "DATABASE_B",
 						"fileSystem": "raw"
 					},
 					"columnDelimiter": ",",
@@ -474,6 +476,7 @@
 							"value": "@dataset().files_name",
 							"type": "Expression"
 						},
+						"folderPath": "DATABASE_A",
 						"fileSystem": "raw"
 					},
 					"columnDelimiter": ",",
@@ -510,6 +513,7 @@
 				"typeProperties": {
 					"location": {
 						"type": "AzureBlobFSLocation",
+						"folderPath": "DATABASE_A",
 						"fileSystem": "raw"
 					},
 					"columnDelimiter": ",",
@@ -592,6 +596,57 @@
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "[concat(parameters('factoryName'), '/MasterPipeline')]",
+			"type": "Microsoft.DataFactory/factories/pipelines",
+			"apiVersion": "2018-06-01",
+			"properties": {
+				"activities": [
+					{
+						"name": "all_csv_raw",
+						"type": "ExecutePipeline",
+						"dependsOn": [],
+						"policy": {
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"pipeline": {
+								"referenceName": "all_csv_raw",
+								"type": "PipelineReference"
+							},
+							"waitOnCompletion": true,
+							"parameters": {}
+						}
+					},
+					{
+						"name": "DataBse_A",
+						"type": "ExecutePipeline",
+						"dependsOn": [],
+						"policy": {
+							"secureInput": false
+						},
+						"userProperties": [],
+						"typeProperties": {
+							"pipeline": {
+								"referenceName": "DataBse_A",
+								"type": "PipelineReference"
+							},
+							"waitOnCompletion": true,
+							"parameters": {}
+						}
+					}
+				],
+				"policy": {
+					"elapsedTimeMetric": {}
+				},
+				"annotations": []
+			},
+			"dependsOn": [
+				"[concat(variables('factoryId'), '/pipelines/all_csv_raw')]",
+				"[concat(variables('factoryId'), '/pipelines/DataBse_A')]"
+			]
 		}
 	]
 }

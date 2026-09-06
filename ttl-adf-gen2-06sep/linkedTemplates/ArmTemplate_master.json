@@ -25,7 +25,7 @@
 		},
 		"LS_DATABSE_A_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "trendy-tech-hospital-a"
+			"defaultValue": "trendy-tech-hospital-b"
 		},
 		"LS_DATABSE_A_properties_typeProperties_userName": {
 			"type": "string",
@@ -37,7 +37,7 @@
 		},
 		"sql_ls_properties_typeProperties_database": {
 			"type": "string",
-			"defaultValue": "trendy-tech-hospital-b"
+			"defaultValue": "trendy-tech-hospital-a"
 		},
 		"sql_ls_properties_typeProperties_userName": {
 			"type": "string",

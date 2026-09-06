@@ -18,7 +18,7 @@
 			"value": "tthcemr06sep.database.windows.net"
 		},
 		"LS_DATABSE_A_properties_typeProperties_database": {
-			"value": "trendy-tech-hospital-a"
+			"value": "trendy-tech-hospital-b"
 		},
 		"LS_DATABSE_A_properties_typeProperties_userName": {
 			"value": "sqladmin"
@@ -27,7 +27,7 @@
 			"value": "tthcemr06sep.database.windows.net"
 		},
 		"sql_ls_properties_typeProperties_database": {
-			"value": "trendy-tech-hospital-b"
+			"value": "trendy-tech-hospital-a"
 		},
 		"sql_ls_properties_typeProperties_userName": {
 			"value": "sqladmin"

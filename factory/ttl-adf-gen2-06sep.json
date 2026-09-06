@@ -1,0 +1,15 @@
+{
+	"name": "ttl-adf-gen2-06sep",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "indiasouthcentral",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "715037d2-ae09-49e8-adc2-245480c158a9",
+		"tenantId": "b8a6bae8-ac1d-4374-9247-2912060cd297"
+	}
+}

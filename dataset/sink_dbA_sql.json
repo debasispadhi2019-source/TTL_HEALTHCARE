@@ -1,0 +1,17 @@
+{
+	"name": "sink_dbA_sql",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_DATABSE_A",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"table_nam": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": []
+	}
+}

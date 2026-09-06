@@ -76,7 +76,8 @@
 								"sink": {
 									"type": "AzureSqlSink",
 									"writeBehavior": "insert",
-									"sqlWriterUseTableLock": false
+									"sqlWriterUseTableLock": false,
+									"disableMetricsCollection": false
 								},
 								"enableStaging": false,
 								"translator": {
@@ -106,7 +107,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"Table_name": {
-											"value": "@item().name",
+											"value": "@replace(item().name,'.csv','')",
 											"type": "Expression"
 										}
 									}

@@ -26,15 +26,6 @@
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
-		"schema": [
-			{
-				"name": "DeptID",
-				"type": "String"
-			},
-			{
-				"name": "Name",
-				"type": "String"
-			}
-		]
+		"schema": []
 	}
 }

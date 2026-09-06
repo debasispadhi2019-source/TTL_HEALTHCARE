@@ -5,6 +5,9 @@
 			"referenceName": "ttl_raw_sql_ls",
 			"type": "LinkedServiceReference"
 		},
+		"folder": {
+			"name": "SOUCE_SQL"
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

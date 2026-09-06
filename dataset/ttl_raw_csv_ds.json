@@ -19,6 +19,7 @@
 					"value": "@dataset().files_name",
 					"type": "Expression"
 				},
+				"folderPath": "DATABASE_A",
 				"fileSystem": "raw"
 			},
 			"columnDelimiter": ",",

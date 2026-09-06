@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
+				"folderPath": "DATABASE_B",
 				"fileSystem": "raw"
 			},
 			"columnDelimiter": ",",
